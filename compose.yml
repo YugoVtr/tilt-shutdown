@@ -1,0 +1,8 @@
+services:
+  webserver-api:
+    container_name: webserver-api
+    image: webserver-api-image
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
