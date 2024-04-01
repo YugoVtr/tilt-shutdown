@@ -9,7 +9,7 @@ docker_build(
   'webserver-api-image',
   '.',
   dockerfile='Dockerfile',
-  only=['build/webserver-api', "main.go", "go.mod", "go.sum", "http", "mux"],
+  only=['build/webserver-api'],
   live_update=[
     sync('./build/webserver-api', '/app/webserver-api')
   ]

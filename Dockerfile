@@ -1,4 +1,6 @@
 FROM alpine
-ADD build/webserver-api /
+RUN apk add entr
+RUN mkdir /app
 WORKDIR /app
-CMD ["/webserver-api"]
+ADD build/webserver-api ./
+CMD ls webserver-api | entr -rn ./webserver-api
